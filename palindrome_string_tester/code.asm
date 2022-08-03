@@ -12,7 +12,7 @@ bobob: .asciiz "bobob"
 
 	# 1rst Example :
   la    $a0, anna
-  addi  $a1, $zero,17  
+  addi  $a1, $zero,4 
   jal   pdrome
   add   $s0, $v0, $zero  # keep the return value
 
