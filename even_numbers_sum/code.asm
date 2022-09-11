@@ -1,5 +1,5 @@
        .data
-array: .word 0,1,2,3,4,5,6,7,8,9,10,-1,-2,-3,-56,-9
+array: .word 0,1,2,3,4,5,6,7,8,9,10,-1,-2,-3,-56,-9  # array initialization
 
 ###############################################################################
         .text 
@@ -21,7 +21,7 @@ loop:
 	andi $t1, $t0, 1               # less significant bit check to determine number nature || If bit  == 0 then then $t1 == 0 (number is odd). If bit is 1 then $t1 = 1 (number is even)
 	bne  $t1, $zero, loop          # if value in $t1 == 0 (number is odd) goto label loop else do nothing( proceed to next line)
 	add  $v0, $v0, $t0             # Number is even . $v0 = $v0 + $t0  ($v0 -> sum , $t0 -> number)
-	j loop			 # goto label loop.
+	j loop			       # goto label loop.
 exit:
 
 
